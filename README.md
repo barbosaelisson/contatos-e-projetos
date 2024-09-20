@@ -2,7 +2,7 @@
 
 Aqui você pode ter acesso a todos os meus contatos.
 
-![alt text](./assets/projeto.png)
+![Logo do Projeto](./assets/projeto.png)
 
 ## ✒️ Autor
 
