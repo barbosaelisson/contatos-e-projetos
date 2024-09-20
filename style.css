@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: rgb(245, 235, 235);
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg); /* É o caminho aonde esta a nossa imagem 
+  background-repeat: no-repeat; /* Não vai deixar repedir a mesma imagem várias vezes 
+  background-position: top center; /* Vai centralizar a imagem no centro e no top 
+  background-size: cover;          /* Vai Posicionar a imagem em toda a tela, preeencher todo espaço
+  */
+
+  /* background: color, image, repeat, top center, cover/size*/
+  background: var(--bg-url) no-repeat top center/cover; /* Como o cover é size é preciso usara barra no meio*/
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+#container {
+  /* Aqui vai pegar o Id de dentro da div em nosso HTML dentro do Body*/
+
+  width: 360px; /* Largura de 360 px */
+  /* border: 1px solid red;  Vamos colocar uma borda na cor vermelha com apenas 1pix*/
+  margin: 56px auto 0;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center; /* Aqui vai centralizar o texto e o Avatar */
+  padding: 40px;
+}
+
+#profile img {
+  width: 150px;
+}
+#profile img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out; /* Cria uma transição suave para o efeito de aumento, com duração de 0.3 segundos e uma curva de aceleração e desaceleração suave. */
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* Switch */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute; /* Esta sobrepondo um acima do outro*/
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1;
+  z-index: 1; /* Com essa propriedade do Css podemos mudar a camada de pocisão do elemento acima*/
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Links - listas Ul/li */
+
+ul {
+  list-style: none; /* Retirar os pontos do Ul no HTML*/
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* Necessário usar o webkit para rodar em alguns navegadores como Safari */
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/*Animação no link quando passar o mouse */
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+/* Social links*/
+#social-links {
+  justify-content: center;
+  display: flex;
+  /*gap: 16px;*/
+  font-size: 24px;
+  padding: 24px 0;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: backgroud 0.2s;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
