@@ -2,15 +2,20 @@
 
 Aqui você pode ter acesso a todos os meus contatos.
 
-![Logo do Projeto](./assets/projeto.png)
-
+<p aling="center"> 
+  <img alt="Projeto" src="./github/projeto.png">
+</p>
 ## ✒️ Autor
 
 Élisson A Barbosa
 
 ## 🛠️ Construído com
 
-HTML, CSS E JAVASCRIPT
+Esse projeto foi desenvolvido com as seguintes tecnologia:
+
+- HTML
+- CSS
+- JAVASCRIPT
 
 ## 📄 Licença
 
