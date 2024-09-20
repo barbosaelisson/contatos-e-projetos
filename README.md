@@ -17,6 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologia:
 - HTML
 - CSS
 - JAVASCRIPT
+- GIT E GITHUB
 
 ## 📄 Licença
 
