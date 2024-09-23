@@ -48,7 +48,7 @@ body * {
 
   width: 100%; /* Largura de 360 px */
   /* border: 1px solid red;  Vamos colocar uma borda na cor vermelha com apenas 1pix*/
-  max-width: 588px;
+  max-width: 100%;
   margin: 56px auto 0;
   padding: 0 24px;
 }
