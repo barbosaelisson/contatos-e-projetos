@@ -63,7 +63,7 @@ body * {
 }
 #profile img:hover {
   transform: scale(1.2);
-  transition: transform 0.3s ease-in-out; /* Cria uma transição suave para o efeito de aumento, com duração de 0.3 segundos e uma curva de aceleração e desaceleração suave. */
+  /* transition: transform 0.3s ease-in-out;  Cria uma transição suave para o efeito de aumento, com duração de 0.3 segundos e uma curva de aceleração e desaceleração suave. */
 }
 
 #profile p {
