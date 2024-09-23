@@ -91,10 +91,15 @@ body * {
   left: 0;
   z-index: 1; /* Com essa propriedade do Css podemos mudar a camada de pocisão do elemento acima*/
   transform: translateY(-50%);
+  animation: slide-a 0.5s;
 }
 
 .light #switch button {
-  animation: slide-s 0.4s forwards;
+  animation: slide-s 0.5s forwards;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -191,5 +196,14 @@ footer {
   }
   to {
     left: 50%;
+  }
+}
+
+@keyframes slide-a {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
