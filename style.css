@@ -33,6 +33,7 @@ body {
 
   /* background: color, image, repeat, top center, cover/size*/
   background: var(--bg-url) no-repeat top center/cover; /* Como o cover é size é preciso usara barra no meio*/
+  height: 100vh;
 }
 
 body * {
