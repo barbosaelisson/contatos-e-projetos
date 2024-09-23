@@ -88,14 +88,13 @@ body * {
   border-radius: 50%;
   position: absolute; /* Esta sobrepondo um acima do outro*/
   top: 50%;
-  transform: translateY(-50%);
-  left: 1;
+  left: 0;
   z-index: 1; /* Com essa propriedade do Css podemos mudar a camada de pocisão do elemento acima*/
+  transform: translateY(-50%);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-s 0.4s forwards;
 }
 
 #switch span {
@@ -181,5 +180,16 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animation*/
+
+@keyframes slide-s {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
   }
 }
